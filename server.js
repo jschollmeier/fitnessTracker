@@ -11,7 +11,7 @@ app.use(express.json());
 require("./routes/apiRoutes")(app);
 require("./routes/html-routes")(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
+mongoose.connect(process.env.mongoAtlas || "mongodb://localhost/workouts", {
   useNewUrlParser: true
 });
 
