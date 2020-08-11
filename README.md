@@ -4,6 +4,7 @@ by Kent Schollmeier
 
 ## Link to Deployed application 
 
+[Heroku Fitness Application](https://safe-bastion-74603.herokuapp.com/)
 
 ## User Story
 
@@ -15,9 +16,9 @@ A consumer will reach their fitness goals quicker when they track their workout 
 
 ## Screenshots 
 
-<img src="" width="100" height="100"/>
-<img src="" width="100" height="100"/>
-<img src="" width="100" height="100"/>
+<img src="https://raw.githubusercontent.com/jschollmeier/fitnessTracker/master/FTSS2.PNG" width="100" height="100"/>
+<img src="https://raw.githubusercontent.com/jschollmeier/fitnessTracker/master/FTSS1.PNG" width="100" height="100"/>
+<img src="https://raw.githubusercontent.com/jschollmeier/fitnessTracker/master/FTSS3.PNG" width="100" height="100"/>
 
 
 
