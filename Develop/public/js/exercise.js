@@ -100,23 +100,33 @@ async function handleFormSubmit(event) {
 
   let workoutData = {};
 
-  if (workoutType === "cardio") {
+  if (workoutType === "cardio" && cardioNameInput!='') {
     workoutData.type = "cardio";
     workoutData.name = cardioNameInput.value.trim();
     workoutData.distance = Number(distanceInput.value.trim());
     workoutData.duration = Number(durationInput.value.trim());
-  } else if (workoutType === "resistance") {
+
+    await API.addExercise(workoutData); console.log(workoutData);
+    clearInputs();
+    toast.classList.add("success");
+
+  } else if (workoutType === "resistance" && nameInput!='') {
     workoutData.type = "resistance";
     workoutData.name = nameInput.value.trim();
     workoutData.weight = Number(weightInput.value.trim());
     workoutData.sets = Number(setsInput.value.trim());
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
-  }
 
-  await API.addExercise(workoutData);
-  clearInputs();
-  toast.classList.add("success");
+    await API.addExercise(workoutData); console.log(workoutData);
+    clearInputs();
+    toast.classList.add("success");
+  }
+  else{
+    alert("enter your exercise");
+  }
+//console.log(workoutData);
+  
 }
 
 function handleToastAnimationEnd() {
@@ -135,6 +145,7 @@ function clearInputs() {
   repsInput.value = "";
   resistanceDurationInput.value = "";
   weightInput.value = "";
+  validateInputs();
 }
 
 if (workoutTypeSelect) {
